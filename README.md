@@ -12,11 +12,11 @@ Get started by cloning this repository, which contains the source code for `ionq
 git clone https://github.com/ionq-applications/ionq-vision-challenge.git
 ```
 
-Then follow our [installation guide](https://refactored-adventure-228m4r2.pages.github.io/env-setup) to set up your development environment.
+Then follow our [installation guide](https://willieab.github.io/qml-challenge-scorer/env-setup) to set up your development environment.
 
 ## Challenge
 
-Now you're ready to get hacking! Check out the [challenge description](https://refactored-adventure-228m4r2.pages.github.io) and use the provided starter code to train your novel models and submit them for training.
+Now you're ready to get hacking! Check out the [challenge description](https://willieab.github.io/qml-challenge-scorer/) and use the provided starter code to train your novel models and submit them for training.
 
 The model with the most accurate predictions wins! 🏆
 
