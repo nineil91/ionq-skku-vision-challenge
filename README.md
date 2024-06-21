@@ -9,7 +9,7 @@ In this challenge you'll work like an IonQ Apps Team scientist to explore image 
 Get started by cloning this repository, which contains the source code for `ionqvision`, IonQ's next-generation SDK. Fire up your terminal and run the following command!
 
 ```
-git clone https://github.com/ionq-applications/ionq-vision-challenge.git
+git clone https://github.com/willieab/ionq-skku-vision-challenge.git
 ```
 
 Then follow our [installation guide](https://willieab.github.io/qml-challenge-scorer/env-setup) to set up your development environment.
