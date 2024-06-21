@@ -1,0 +1,30 @@
+name: Trigger scorer
+on:
+  push:
+    branches:
+       - '**'
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          sparse-checkout: README.md
+          sparse-checkout-cone-mode: false
+
+      - name: Retrieve commit hash
+        run: |
+          git rev-parse HEAD~1
+          echo "SUBMISSION_SHA=$(git rev-parse HEAD~1)" > $GITHUB_OUTPUT
+        id: version
+
+      - name: Submit model for grading
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.TRIGGER_KEY }}
+          repository: ionq-applications/challenge-scorer
+          event-type: score-submission
+          client-payload: '{"ref": "${{ github.ref }}", "submission": "${{ steps.version.outputs.SUBMISSION_SHA }}"}'
