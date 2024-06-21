@@ -25,6 +25,6 @@ jobs:
         uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.TRIGGER_KEY }}
-          repository: ionq-applications/challenge-scorer
+          repository: willieab/qml-challenge-scorer
           event-type: score-submission
           client-payload: '{"ref": "${{ github.ref }}", "submission": "${{ steps.version.outputs.SUBMISSION_SHA }}"}'
